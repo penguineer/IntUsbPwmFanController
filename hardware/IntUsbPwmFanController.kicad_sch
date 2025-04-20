@@ -5926,7 +5926,7 @@
 	)
 	(global_label "SDA"
 		(shape bidirectional)
-		(at 186.69 40.64 180)
+		(at 186.69 38.1 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5936,7 +5936,7 @@
 		)
 		(uuid "00a56c56-96ec-42c7-a48c-4b4e4032eaab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.6552 40.64 0)
+			(at 180.6552 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5992,7 +5992,7 @@
 	)
 	(global_label "PWM"
 		(shape output)
-		(at 186.69 45.72 180)
+		(at 186.69 43.18 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6002,7 +6002,7 @@
 		)
 		(uuid "203bbef8-25f0-489e-be56-366030bd0b3c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 181.0539 45.72 0)
+			(at 181.0539 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6344,7 +6344,7 @@
 	)
 	(global_label "SCL"
 		(shape bidirectional)
-		(at 186.69 38.1 180)
+		(at 186.69 40.64 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6354,7 +6354,7 @@
 		)
 		(uuid "c9947a12-ae42-4b4a-8ac7-62efab9e8733")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.7028 38.1 0)
+			(at 180.7028 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6410,7 +6410,7 @@
 	)
 	(global_label "Tacho"
 		(shape input)
-		(at 186.69 43.18 180)
+		(at 186.69 45.72 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6420,7 +6420,7 @@
 		)
 		(uuid "e1d2f70f-5ebd-4f54-8886-b9fda320878f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.0063 43.18 0)
+			(at 180.0063 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
