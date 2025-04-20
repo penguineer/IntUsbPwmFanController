@@ -1,0 +1,20 @@
+penv
+
+# PlatformIO files
+/.pio
+/.vscode
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# CLion files
+/.idea
+cmake-build-*/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
