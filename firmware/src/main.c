@@ -259,10 +259,11 @@ uint32_t get_chip_id(void) {
 
 void TWI_handle_master_command(const uint8_t command, const uint8_t *data, const uint8_t data_length) {
     switch (command) {
-        case TWI_CMD_GET_ID:
+        case TWI_CMD_GET_ID: {
             const uint32_t chip_id = get_chip_id();
             TWI_prepare_response((const uint8_t *) &chip_id, sizeof(chip_id));
             break;
+        }
         case TWI_CMD_SET_PWM:
             if (data_length == 1) {
                 const uint8_t pwm_target_param = data[0];
@@ -349,7 +350,8 @@ int main(void) {
     TCA_init_pwm();
     TCB_init_tacho_counter();
     RTC_init();
+    SLEEP_init();
 
     // ReSharper disable once CppDFAEndlessLoop
-    while (1);
+    for (;;);
 }
