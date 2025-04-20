@@ -1,6 +1,7 @@
 #include <stddef.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <avr/sleep.h>
 
 #define TWI_SLAVE_ADDRESS 0x42
 
@@ -52,6 +53,9 @@ void TCA_init_pwm(void) {
 }
 
 void update_target_pwm(const uint8_t duty_cycle_param) {
+    // Store the setting
+    pwm_target = duty_cycle_param;
+
     // Perform the calculation in a 32-bit space to avoid wrapping/clipping
     const uint32_t temp = (uint32_t) PWM_PREBUF * duty_cycle_param;
     // Scale back to the correct range
@@ -124,6 +128,15 @@ void RTC_init(void) {
 
     // Clear any existing interrupt flags
     RTC.INTFLAGS = RTC_OVF_bm;
+}
+
+void RTC_reset(void) {
+    // Wait until RTC is not busy
+    while (RTC.STATUS > 0)
+        /* busy wait */;
+
+    // Reset the RTC counter
+    RTC.CNT = 0;
 }
 
 ISR(RTC_CNT_vect) {
@@ -272,6 +285,54 @@ void TWI_handle_master_command(const uint8_t command, const uint8_t *data, const
     }
 }
 
+/***** Sleep Mode *****/
+
+void SLEEP_init(void) {
+    // Configure PA7 as input
+    PORTA.DIRCLR = PIN7_bm;
+
+    // Enable interrupt on both edges with pull-up
+    PORTA.PIN7CTRL = PORT_ISC_BOTHEDGES_gc | PORT_PULLUPEN_bm;
+}
+
+ISR(PORTA_PORT_vect) {
+    // ISR(PORTA_PORT_vect) handles interrupts on PA7, which is configured for both edge detection.
+    // This ISR is not triggered by PA6, as PA6 is configured for event routing via the Event System
+    // and does not generate pin interrupts.
+
+    if (PORTA.INTFLAGS & PIN7_bm) {
+        if (!(PORTA.IN & PIN7_bm)) {
+            // Falling edge: Enter sleep mode
+
+            // Set PWM to 0%
+            update_target_pwm(0);
+            // Stop tacho calculations
+            TCB_disable_event_routing();
+            // Set sleep mode
+            set_sleep_mode(SLEEP_MODE_STANDBY);
+            sleep_enable();
+            // Enter sleep mode
+            sleep_cpu();
+            // Disable sleep after waking up
+            sleep_disable();
+        } else {
+            // Rising edge: Wake up and restore state
+
+            // Restore PWM duty cycle
+            update_target_pwm(pwm_target);
+
+            // Reset tacho calculation
+            TCB_get_and_reset_count();
+            RTC_reset();
+
+            // Resume tacho calculations
+            TCB_enable_event_routing();
+        }
+        // Clear interrupt flag
+        PORTA.INTFLAGS = PIN7_bm;
+    }
+}
+
 /***** Main *****/
 
 void set_clock_to_20MHz(void) {
@@ -285,9 +346,10 @@ void set_clock_to_20MHz(void) {
 int main(void) {
     set_clock_to_20MHz();
     TWI_slave_init();
+    TCA_init_pwm();
     TCB_init_tacho_counter();
     RTC_init();
 
     // ReSharper disable once CppDFAEndlessLoop
-    for (;;);
+    while (1);
 }
