@@ -215,7 +215,9 @@ ISR(TWI0_TWIS_vect) {
             // STOP condition detected
             if (rx_index > 0) {
                 // Process received data
-                TWI_handle_master_command(rx_buffer[0], &rx_buffer[1], rx_index + 1);
+                // Note that rx_index has already been incremented and points to the next position in the buffer,
+                // thus represents the data length.
+                TWI_handle_master_command(rx_buffer[0], &rx_buffer[1], rx_index);
             }
             rx_index = 0; // Reset receive buffer index
         }
