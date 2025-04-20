@@ -27,12 +27,36 @@
 uint8_t pwm_target = 0; // Target PWM value
 uint16_t tacho_measurement = 0; // Current tacho measurement
 
-/***** PWM  *****/
+/***** PWM *****/
 
-void update_target_pwm(const uint8_t) {
-    // TODO implement
+// Assumes a prescaler of 8 and a frequency of 25 kHz
+#define PWM_PREBUF ((F_CPU / (8 * 25000)) - 1)
+
+void TCA_init_pwm(void) {
+    // Configure PA3 as output
+    PORTA.DIRSET = PIN3_bm; // Set PA3 as output
+
+    // TCA0 WO[1] routes to PA3
+
+    // Set TCA0 to single-slope PWM mode
+    TCA0.SINGLE.CTRLB = TCA_SINGLE_WGMODE_SINGLESLOPE_gc | TCA_SINGLE_CMP1EN_bm; // Enable WO1 (PA3)
+
+    // Set the period
+    TCA0.SINGLE.PER = PWM_PREBUF;
+
+    // Set the compare value for 0% duty cycle
+    TCA0.SINGLE.CMP1 = 0; // 0% duty cycle
+
+    // Enable the TCA0 clock with a prescaler of 8
+    TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV8_gc | TCA_SINGLE_ENABLE_bm;
 }
 
+void update_target_pwm(const uint8_t duty_cycle_param) {
+    // Perform the calculation in a 32-bit space to avoid wrapping/clipping
+    const uint32_t temp = (uint32_t) PWM_PREBUF * duty_cycle_param;
+    // Scale back to the correct range
+    TCA0.SINGLE.CMP1 = temp >> 8;
+}
 
 /***** TWI Core *****/
 
@@ -140,8 +164,10 @@ void TWI_handle_master_command(const uint8_t command, const uint8_t *data, const
             break;
         case TWI_CMD_SET_PWM:
             if (data_length == 1) {
-                const uint8_t pwm_target = data[0];
-                update_target_pwm(pwm_target);
+                const uint8_t pwm_target_param = data[0];
+                update_target_pwm(pwm_target_param);
+                // no response
+                TWI_prepare_response(NULL, 0);
             }
             break;
         case TWI_CMD_GET_TACHO:
@@ -156,7 +182,16 @@ void TWI_handle_master_command(const uint8_t command, const uint8_t *data, const
 
 /***** Main *****/
 
+void set_clock_to_20MHz(void) {
+    // Set the main clock source to the 20 MHz internal oscillator
+    _PROTECTED_WRITE(CLKCTRL.MCLKCTRLA, CLKCTRL_CLKSEL_OSC20M_gc);
+
+    // Set the pre-scaler to divide by 2 (20 MHz / 2 = 10 MHz)
+    _PROTECTED_WRITE(CLKCTRL.MCLKCTRLB, CLKCTRL_PDIV_2X_gc | CLKCTRL_PEN_bm);
+}
+
 int main(void) {
+    set_clock_to_20MHz();
     TWI_slave_init();
 
     // ReSharper disable once CppDFAEndlessLoop
