@@ -17,9 +17,9 @@
 #define TWI_CMD_SET_PWM   0x02
 /* TWI command "Get Tacho"
  *
- * This command returns the most recent completed tacho measurement (2 bytes).
+ * This command returns the most recent completed tachometer measurement (2 bytes).
  *
- * Please note that there is a delay between setting the PWM value and retrieving a matching tacho measurement.
+ * Please note that there is a delay between setting the PWM value and retrieving a matching tachometer measurement.
  */
 #define TWI_CMD_GET_TACHO 0x03
 
@@ -64,23 +64,24 @@ void update_target_pwm(const uint8_t duty_cycle_param) {
 
 /***** Tacho *****/
 
-void TCB_enable_event_routing(void) {
-    // Configure Event System to route PA6 to TCB0
-    EVSYS.ASYNCCH0 = EVSYS_ASYNCCH0_PORTA_PIN6_gc; // Pin PA6
-    EVSYS.ASYNCUSER0 = EVSYS_ASYNCUSER0_ASYNCCH0_gc; // route to TCB0
+void PA6_enable_edge_sensing(void) {
+    // Enable sensing on rising edge
+    PORTA.PIN6CTRL = PORT_ISC_RISING_gc;
 }
 
-void TCB_disable_event_routing(void) {
-    // Disable the channel
-    EVSYS.ASYNCCH0 = EVSYS_ASYNCCH0_OFF_gc;
+void PA6_disable_edge_sensing(void) {
+    // Disable sensing
+    PORTA.PIN6CTRL = 0;
 }
 
 void TCB_init_tacho_counter(void) {
     // Configure PA6 as input
     PORTA.DIRCLR = PIN6_bm; // Set PA6 as input
-    PORTA.PIN6CTRL = PORT_ISC_RISING_gc; // Enable sensing on rising edge
+    PA6_enable_edge_sensing();
 
-    TCB_enable_event_routing();
+    // Configure Event System to route PA6 to TCB0
+    EVSYS.ASYNCCH0 = EVSYS_ASYNCCH0_PORTA_PIN6_gc; // Pin PA6
+    EVSYS.ASYNCUSER0 = EVSYS_ASYNCUSER0_ASYNCCH0_gc; // route to TCB0
 
     // Configure TCB0 in event counting mode
     TCB0.CTRLA = TCB_CLKSEL_CLKDIV1_gc | TCB_ENABLE_bm; // Enable TCB0 with no prescaler
@@ -91,16 +92,16 @@ void TCB_init_tacho_counter(void) {
 }
 
 uint16_t TCB_get_and_reset_count(void) {
-    // Disable the event generator to prevent race conditions
-    TCB_disable_event_routing();
+    // Disable edge sensing to prevent race conditions
+    PA6_disable_edge_sensing();
 
     // Read the current count
     const uint16_t count = TCB0.CNT;
     // Clear the counter
     TCB0.CNT = 0;
 
-    // Enable event generator again
-    TCB_enable_event_routing();
+    // Enable edge sensing
+    PA6_enable_edge_sensing();
 
     // Return the current counter value
     return count;
@@ -307,8 +308,8 @@ ISR(PORTA_PORT_vect) {
 
             // Set PWM to 0%
             update_target_pwm(0);
-            // Stop tacho calculations
-            TCB_disable_event_routing();
+            // Stop tachometer calculations
+            PA6_disable_edge_sensing();
             // Set sleep mode
             set_sleep_mode(SLEEP_MODE_STANDBY);
             sleep_enable();
@@ -322,12 +323,10 @@ ISR(PORTA_PORT_vect) {
             // Restore PWM duty cycle
             update_target_pwm(pwm_target);
 
-            // Reset tacho calculation
+            // Reset and resume tachometer calculation
             TCB_get_and_reset_count();
             RTC_reset();
-
-            // Resume tacho calculations
-            TCB_enable_event_routing();
+            PA6_enable_edge_sensing();
         }
         // Clear interrupt flag
         PORTA.INTFLAGS = PIN7_bm;
