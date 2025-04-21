@@ -4934,7 +4934,7 @@
 	)
 	(text "VCC3V3"
 		(exclude_from_sim no)
-		(at 106.68 110.49 0)
+		(at 67.31 110.49 0)
 		(effects
 			(font
 				(size 1 1)
@@ -5032,6 +5032,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "32909068-a82a-479f-824c-8d214f060bfc")
+	)
+	(junction
+		(at 66.04 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34aefcd6-9e54-446a-a50b-c57dbb6c98be")
 	)
 	(junction
 		(at 93.98 101.6)
@@ -5136,12 +5142,6 @@
 		(uuid "9f81029c-01da-42b7-83dc-87482fe75d7a")
 	)
 	(junction
-		(at 104.14 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a0797b6f-4ffe-4f57-be60-f87a2b71655b")
-	)
-	(junction
 		(at 212.09 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5200,12 +5200,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c93f9c4f-6ff8-4aba-b706-7dc05bd0333b")
-	)
-	(junction
-		(at 104.14 101.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cfd890c6-2345-46d5-b13c-194c7870025a")
 	)
 	(junction
 		(at 196.85 96.52)
@@ -5543,7 +5537,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 30.48) (xy 147.32 36.83)
+			(xy 147.32 30.48) (xy 147.32 35.56)
 		)
 		(stroke
 			(width 0)
@@ -6003,6 +5997,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 111.76) (xy 76.2 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "553a00d3-e23a-45fa-af69-2f1fc7643bb5")
+	)
+	(wire
+		(pts
 			(xy 135.89 160.02) (xy 135.89 161.29)
 		)
 		(stroke
@@ -6040,6 +6044,16 @@
 			(type default)
 		)
 		(uuid "5a2e17b9-f707-4e36-8697-294e222540e1")
+	)
+	(wire
+		(pts
+			(xy 88.9 111.76) (xy 93.98 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bdcaba8-0636-46cc-b092-94663fb46023")
 	)
 	(wire
 		(pts
@@ -6183,7 +6197,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 110.49) (xy 104.14 111.76)
+			(xy 66.04 110.49) (xy 66.04 111.76)
 		)
 		(stroke
 			(width 0)
@@ -6313,6 +6327,16 @@
 	)
 	(wire
 		(pts
+			(xy 93.98 100.33) (xy 93.98 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "794c146c-757f-44f5-969d-ab785e2339fd")
+	)
+	(wire
+		(pts
 			(xy 125.73 149.86) (xy 124.46 149.86)
 		)
 		(stroke
@@ -6330,16 +6354,6 @@
 			(type default)
 		)
 		(uuid "80501c56-28f7-4a05-adbc-892a998844f4")
-	)
-	(wire
-		(pts
-			(xy 93.98 111.76) (xy 104.14 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "80f56bf8-b94f-4fdd-ad20-cdd28ae6020e")
 	)
 	(wire
 		(pts
@@ -6553,16 +6567,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 111.76) (xy 93.98 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a813545-9f70-4f80-9ce4-432ab0030c51")
-	)
-	(wire
-		(pts
 			(xy 124.46 62.23) (xy 128.27 62.23)
 		)
 		(stroke
@@ -6743,7 +6747,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 44.45) (xy 147.32 91.44)
+			(xy 147.32 43.18) (xy 147.32 91.44)
 		)
 		(stroke
 			(width 0)
@@ -7023,26 +7027,6 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 100.33) (xy 104.14 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca2eab23-2f8c-40c5-9228-453bb2973472")
-	)
-	(wire
-		(pts
-			(xy 93.98 101.6) (xy 104.14 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca6b43d8-4b22-4916-b864-27e6a092c32c")
-	)
-	(wire
-		(pts
 			(xy 201.93 40.64) (xy 198.12 40.64)
 		)
 		(stroke
@@ -7070,16 +7054,6 @@
 			(type default)
 		)
 		(uuid "cd63d54b-e413-470b-a66b-5aa3fee896bf")
-	)
-	(wire
-		(pts
-			(xy 104.14 111.76) (xy 116.84 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cfc1c924-5fcf-4340-ae40-680972a4d5b9")
 	)
 	(wire
 		(pts
@@ -7303,7 +7277,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 111.76) (xy 76.2 111.76)
+			(xy 22.86 111.76) (xy 66.04 111.76)
 		)
 		(stroke
 			(width 0)
@@ -7393,7 +7367,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 101.6) (xy 104.14 102.87)
+			(xy 66.04 100.33) (xy 66.04 102.87)
 		)
 		(stroke
 			(width 0)
@@ -7410,6 +7384,16 @@
 			(type default)
 		)
 		(uuid "fcb84ff2-c51b-4c1e-8467-fcec182f150e")
+	)
+	(wire
+		(pts
+			(xy 93.98 111.76) (xy 116.84 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd3a1d92-4a78-4efe-a490-c836d171693a")
 	)
 	(wire
 		(pts
@@ -8288,7 +8272,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 104.14 106.68 0)
+		(at 66.04 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8296,7 +8280,7 @@
 		(dnp no)
 		(uuid "0e8103cd-92ad-4361-9377-3397dc7c02ca")
 		(property "Reference" "C16"
-			(at 107.061 105.4678 0)
+			(at 68.961 105.4678 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8305,7 +8289,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 107.061 107.8921 0)
+			(at 68.961 107.8921 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8314,7 +8298,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 105.1052 110.49 0)
+			(at 67.0052 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8323,7 +8307,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 104.14 106.68 0)
+			(at 66.04 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8332,7 +8316,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 104.14 106.68 0)
+			(at 66.04 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8341,7 +8325,7 @@
 			)
 		)
 		(property "Mouser No" "963-TMK107BJ104MA-T"
-			(at 109.22 110.49 0)
+			(at 71.12 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8626,6 +8610,72 @@
 			(project "IntUsbPwmFanController"
 				(path "/0a081858-7105-499c-8ae3-353b1745699c"
 					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 66.04 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1af2b323-912f-4f39-9583-f84c4d1d3064")
+		(property "Reference" "#PWR016"
+			(at 66.04 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 66.04 96.1969 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.04 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 66.04 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c521cc5f-2201-4e79-97d4-e6459eea5958")
+		)
+		(instances
+			(project "IntUsbPwmFanController"
+				(path "/0a081858-7105-499c-8ae3-353b1745699c"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -11423,7 +11473,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 147.32 40.64 180)
+		(at 147.32 39.37 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11432,7 +11482,7 @@
 		(fields_autoplaced yes)
 		(uuid "8972549b-1ea8-448f-be80-c1ae042a5e4b")
 		(property "Reference" "R18"
-			(at 149.098 39.4278 0)
+			(at 149.098 38.1578 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11441,7 +11491,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 149.098 41.8521 0)
+			(at 149.098 40.5821 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11450,7 +11500,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 149.098 40.64 90)
+			(at 149.098 39.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11459,7 +11509,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 147.32 40.64 0)
+			(at 147.32 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11468,7 +11518,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 147.32 40.64 0)
+			(at 147.32 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13892,7 +13942,7 @@
 	)
 	(symbol
 		(lib_id "power:VBUS")
-		(at 104.14 100.33 0)
+		(at 93.98 100.33 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13900,7 +13950,7 @@
 		(dnp no)
 		(uuid "f92a50ca-dc74-4cab-a129-92dfaba6ac01")
 		(property "Reference" "#PWR019"
-			(at 104.14 104.14 0)
+			(at 93.98 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13909,7 +13959,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 104.14 96.1969 0)
+			(at 93.98 96.1969 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13917,7 +13967,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 100.33 0)
+			(at 93.98 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13926,7 +13976,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 100.33 0)
+			(at 93.98 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13935,7 +13985,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 104.14 100.33 0)
+			(at 93.98 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
