@@ -246,7 +246,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "FTDI"
+    ]
   },
   "meta": {
     "filename": "IntUsbPwmFanController.kicad_pro",
