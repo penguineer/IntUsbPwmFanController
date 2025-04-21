@@ -3182,6 +3182,217 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Molex:Connector-Molex-8981"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0.254 4.572 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Molex 8981"
+				(at -0.254 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Molex:Molex 8981 Vertical"
+				(at 0.254 -19.558 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://en.wikipedia.org/wiki/Molex_connector"
+				(at -0.254 -16.256 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Molex 8981 board-side connector (Hard Drive power connector)"
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Connector-Molex-8981_0_1"
+				(polyline
+					(pts
+						(xy -6.35 0) (xy -5.08 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -1.27) (xy 5.08 -1.27) (xy 5.08 0.635) (xy 4.445 1.27) (xy -4.445 1.27) (xy -5.08 0.635)
+						(xy -5.08 -0.635) (xy -5.08 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+						(color 72 72 72 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.81 0)
+					(radius 0.635)
+					(stroke
+						(width 0)
+						(type default)
+						(color 72 72 72 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -1.27 0)
+					(radius 0.635)
+					(stroke
+						(width 0)
+						(type default)
+						(color 72 72 72 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 0.635)
+					(stroke
+						(width 0)
+						(type default)
+						(color 72 72 72 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.81 0)
+					(radius 0.635)
+					(stroke
+						(width 0)
+						(type default)
+						(color 72 72 72 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Connector-Molex-8981_1_1"
+				(pin power_out line
+					(at -8.89 0 0)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 8.89 0 180)
+					(length 2.54)
+					(name "12V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "ThreeWayJumper:ThreeWayJumper"
 			(pin_names
 				(hide yes)
@@ -5058,12 +5269,6 @@
 		(uuid "43e6ddb9-9f53-4474-85af-ff14e53140f8")
 	)
 	(junction
-		(at 260.35 146.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "48496e91-20af-4436-8aae-ff8f5f8af9dd")
-	)
-	(junction
 		(at 233.68 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5357,16 +5562,6 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 140.97) (xy 264.16 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e9e58a8-71c5-4d5d-9ec9-fe4f261137a1")
-	)
-	(wire
-		(pts
 			(xy 128.27 91.44) (xy 140.97 91.44)
 		)
 		(stroke
@@ -5647,6 +5842,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 142.24) (xy 250.19 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "276e3a1d-52de-4ac2-8fd5-d4692674b51b")
+	)
+	(wire
+		(pts
 			(xy 147.32 161.29) (xy 135.89 161.29)
 		)
 		(stroke
@@ -5684,16 +5889,6 @@
 			(type default)
 		)
 		(uuid "2cc431ea-7d64-4c51-8292-c12d5c010259")
-	)
-	(wire
-		(pts
-			(xy 256.54 143.51) (xy 260.35 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d6bb827-b595-440c-a913-cb24f9976ef2")
 	)
 	(wire
 		(pts
@@ -6347,6 +6542,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 151.13) (xy 261.62 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d568e2c-ac7e-49a5-a2eb-cdcdd24de286")
+	)
+	(wire
+		(pts
 			(xy 237.49 74.93) (xy 238.76 74.93)
 		)
 		(stroke
@@ -6354,16 +6559,6 @@
 			(type default)
 		)
 		(uuid "80501c56-28f7-4a05-adbc-892a998844f4")
-	)
-	(wire
-		(pts
-			(xy 256.54 140.97) (xy 264.16 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "819d566d-bb8b-44aa-9125-36f0df1dcc15")
 	)
 	(wire
 		(pts
@@ -6394,16 +6589,6 @@
 			(type default)
 		)
 		(uuid "855fc20f-932e-4731-a9ae-420532e86797")
-	)
-	(wire
-		(pts
-			(xy 270.51 148.59) (xy 270.51 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87f20979-b642-4211-acdd-a4d356dbaa20")
 	)
 	(wire
 		(pts
@@ -6567,6 +6752,16 @@
 	)
 	(wire
 		(pts
+			(xy 274.32 146.05) (xy 270.51 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9add6bd1-6367-46c2-b533-cc5cc64882dc")
+	)
+	(wire
+		(pts
 			(xy 124.46 62.23) (xy 128.27 62.23)
 		)
 		(stroke
@@ -6594,16 +6789,6 @@
 			(type default)
 		)
 		(uuid "9ce0ac69-99bb-47f1-ac0b-cdd22251b885")
-	)
-	(wire
-		(pts
-			(xy 260.35 146.05) (xy 260.35 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e9be5ca-3eae-48e6-817a-38c692b4feae")
 	)
 	(wire
 		(pts
@@ -6647,16 +6832,6 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 148.59) (xy 270.51 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a3461401-8b1c-4089-92c4-c359f155f1b8")
-	)
-	(wire
-		(pts
 			(xy 233.68 43.18) (xy 222.25 43.18)
 		)
 		(stroke
@@ -6664,6 +6839,16 @@
 			(type default)
 		)
 		(uuid "a36c5ac6-e017-427a-be65-47b3b456a35a")
+	)
+	(wire
+		(pts
+			(xy 274.32 142.24) (xy 274.32 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3f92da2-4aad-49b6-9239-def7aead3612")
 	)
 	(wire
 		(pts
@@ -6784,16 +6969,6 @@
 			(type default)
 		)
 		(uuid "b169a28a-e381-471f-8c05-251efc1ac2fc")
-	)
-	(wire
-		(pts
-			(xy 260.35 143.51) (xy 260.35 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b24f7e86-f1f7-4181-92a9-f0040e52a9b5")
 	)
 	(wire
 		(pts
@@ -7007,6 +7182,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 146.05) (xy 252.73 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9a754b0-f8e0-43f7-b56c-ef0ac7616665")
+	)
+	(wire
+		(pts
 			(xy 196.85 86.36) (xy 196.85 96.52)
 		)
 		(stroke
@@ -7034,16 +7219,6 @@
 			(type default)
 		)
 		(uuid "cb5d3b16-222e-4f3a-842c-2558fe9840d5")
-	)
-	(wire
-		(pts
-			(xy 256.54 146.05) (xy 260.35 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ccae02df-e50f-4e42-be49-dfba103aa947")
 	)
 	(wire
 		(pts
@@ -11341,7 +11516,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 264.16 138.43 0)
+		(at 274.32 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11350,7 +11525,7 @@
 		(fields_autoplaced yes)
 		(uuid "87685e93-0c74-45b9-a000-8b9094ef7f45")
 		(property "Reference" "#PWR06"
-			(at 264.16 142.24 0)
+			(at 274.32 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11359,7 +11534,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 264.16 134.2969 0)
+			(at 274.32 138.1069 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11367,7 +11542,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 264.16 138.43 0)
+			(at 274.32 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11376,7 +11551,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 264.16 138.43 0)
+			(at 274.32 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11385,7 +11560,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 264.16 138.43 0)
+			(at 274.32 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12181,7 +12356,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 270.51 138.43 0)
+		(at 250.19 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12190,7 +12365,7 @@
 		(fields_autoplaced yes)
 		(uuid "9c53033c-32ea-4d07-9350-f4693099c2fc")
 		(property "Reference" "#PWR07"
-			(at 270.51 142.24 0)
+			(at 250.19 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12199,7 +12374,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 270.51 134.2969 0)
+			(at 250.19 138.1069 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12207,7 +12382,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 270.51 138.43 0)
+			(at 250.19 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12216,7 +12391,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 270.51 138.43 0)
+			(at 250.19 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12225,7 +12400,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 270.51 138.43 0)
+			(at 250.19 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13511,7 +13686,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 260.35 151.13 0)
+		(at 261.62 152.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13520,7 +13695,7 @@
 		(fields_autoplaced yes)
 		(uuid "dbf22501-b574-409a-850e-4b532333a905")
 		(property "Reference" "#PWR08"
-			(at 260.35 157.48 0)
+			(at 261.62 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13529,7 +13704,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 260.35 155.2631 0)
+			(at 261.62 156.5331 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13537,7 +13712,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.35 151.13 0)
+			(at 261.62 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13546,7 +13721,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260.35 151.13 0)
+			(at 261.62 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13555,7 +13730,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 260.35 151.13 0)
+			(at 261.62 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13868,8 +14043,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x04_Pin")
-		(at 251.46 143.51 0)
+		(lib_id "Molex:Connector-Molex-8981")
+		(at 261.62 146.05 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13877,32 +14052,23 @@
 		(dnp no)
 		(uuid "f825b04e-bfba-4c84-b283-43dbbc5d48cb")
 		(property "Reference" "J3"
-			(at 251.46 134.7357 0)
+			(at 261.62 141.0857 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "MOLEX"
-			(at 251.46 137.16 0)
+		(property "Value" "PC power"
+			(at 261.62 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 251.46 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 251.46 143.51 0)
+		(property "Footprint" "Molex:Molex 8981 Vertical"
+			(at 261.62 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13910,8 +14076,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 251.46 143.51 0)
+		(property "Datasheet" "https://en.wikipedia.org/wiki/Molex_connector"
+			(at 261.366 162.306 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Molex 8981 board-side connector (Hard Drive power connector)"
+			(at 261.874 159.766 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13922,14 +14097,11 @@
 		(pin "1"
 			(uuid "04beea47-34bb-4fa2-bbc3-f91838dc69fd")
 		)
-		(pin "2"
+		(pin "23"
 			(uuid "5f3e79dc-0c3e-4d6d-8e70-27696a038cb1")
 		)
 		(pin "4"
 			(uuid "f12002a3-6f64-4dec-b3ed-61f05ecbf6c4")
-		)
-		(pin "3"
-			(uuid "a23126a1-6597-480b-8aaf-0e95bcc25846")
 		)
 		(instances
 			(project ""
