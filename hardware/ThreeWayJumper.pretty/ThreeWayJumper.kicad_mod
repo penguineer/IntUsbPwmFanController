@@ -1,0 +1,141 @@
+(footprint "ThreeWayJumper"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "2.54mm Pin Header for Three Way Jumper")
+	(property "Reference" "REF**"
+		(at 0 -5.08 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "9ff38e71-0057-4ac4-bb1b-4ab100d5bd6d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Untitled"
+		(at 0 5.08 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "a220701a-3ee9-4ad6-b514-36c005b4ae9f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "79047b44-93b6-44b4-a5db-446d62bff47f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "78bce899-caa9-414c-860f-3ad2a7c3e79b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_poly
+		(pts
+			(xy 1.27 -1.27) (xy 1.905 0) (xy 1.27 1.27)
+		)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "68aecf88-74fa-4a01-bc24-5482b0cb788b")
+	)
+	(fp_poly
+		(pts
+			(xy -1.27 -3.81) (xy 1.27 -3.81) (xy 1.27 3.81) (xy -1.27 3.81) (xy -1.27 1.27) (xy -3.81 1.27) (xy -3.81 -1.27)
+			(xy -1.27 -1.27)
+		)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "4a52d4c4-12ee-4cdd-99b1-f5987e0cba41")
+	)
+	(fp_poly
+		(pts
+			(xy -4.572 -2.032) (xy -2.032 -2.032) (xy -2.032 -4.572) (xy 2.032 -4.572) (xy 2.032 4.572) (xy -2.032 4.572)
+			(xy -2.032 2.032) (xy -4.572 2.032)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "378b4c47-b20a-4f1e-a4b8-757ba886a8bc")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 6.35 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "a2ff0778-157e-4e5a-8ef4-3a989929d389")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 -2.54)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b0f72976-9ba4-49f5-9053-97b2ce59c841")
+	)
+	(pad "2" thru_hole rect
+		(at -2.54 0)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f6ec3782-c381-4165-a330-6cf806db8059")
+	)
+	(pad "3" thru_hole rect
+		(at 0 2.54)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9b20753c-e1bd-4f3d-8a0e-514de5ab2600")
+	)
+	(pad "4" thru_hole rect
+		(at 0 0)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "58406ae3-98bf-45a3-9c04-c1c5064c663a")
+	)
+	(embedded_fonts no)
+)
