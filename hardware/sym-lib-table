@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "FTDI")(type "KiCad")(uri "${KIPRJMOD}/FTDI.kicad_sym")(options "")(descr ""))
+)
