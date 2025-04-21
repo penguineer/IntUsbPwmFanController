@@ -245,9 +245,12 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
+    "pinned_footprint_libs": [
+      "ThreeWayJumper"
+    ],
     "pinned_symbol_libs": [
-      "FTDI"
+      "FTDI",
+      "ThreeWayJumper"
     ]
   },
   "meta": {
