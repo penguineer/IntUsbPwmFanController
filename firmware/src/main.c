@@ -305,8 +305,8 @@ ISR(PORTA_PORT_vect) {
     // and does not generate pin interrupts.
 
     if (PORTA.INTFLAGS & PIN7_bm) {
-        if (!(PORTA.IN & PIN7_bm)) {
-            // Falling edge: Enter sleep mode
+        if (PORTA.IN & PIN7_bm) {
+            // Rising edge: Enter sleep mode
 
             // Set PWM to 0%
             update_target_pwm(0);
@@ -320,7 +320,7 @@ ISR(PORTA_PORT_vect) {
             // Disable sleep after waking up
             sleep_disable();
         } else {
-            // Rising edge: Wake up and restore state
+            // Falling edge: Wake up and restore state
 
             // Restore PWM duty cycle
             update_target_pwm(pwm_target);
