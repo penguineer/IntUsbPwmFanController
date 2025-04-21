@@ -448,12 +448,14 @@
   "libraries": {
     "pinned_footprint_libs": [
       "ThreeWayJumper",
-      "Molex"
+      "Molex",
+      "USB"
     ],
     "pinned_symbol_libs": [
       "FTDI",
       "ThreeWayJumper",
-      "Molex"
+      "Molex",
+      "USB"
     ]
   },
   "meta": {
@@ -541,7 +543,7 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
