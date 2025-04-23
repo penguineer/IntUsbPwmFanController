@@ -5561,6 +5561,12 @@
 		(uuid "0bc82bbd-1ad7-47c7-860e-c45ad6a7bed8")
 	)
 	(junction
+		(at 212.09 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c2bb957-fdc9-405f-ac48-949739ef8293")
+	)
+	(junction
 		(at 110.49 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5812,6 +5818,12 @@
 		(color 0 0 0 0)
 		(uuid "e242e073-4aef-4655-80fc-b71508fe29ce")
 	)
+	(junction
+		(at 114.3 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ff1a312a-5b99-4619-8564-5d1bd2088a73")
+	)
 	(no_connect
 		(at 59.69 91.44)
 		(uuid "b441d631-a63e-48fa-b8e6-ff9bbda08e53")
@@ -5845,6 +5857,16 @@
 			(type default)
 		)
 		(uuid "0296eb65-7714-45bf-bc2c-1260cd3de4b6")
+	)
+	(wire
+		(pts
+			(xy 198.12 27.94) (xy 212.09 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02a604bc-2178-4aca-829e-3a9f62e80c2b")
 	)
 	(wire
 		(pts
@@ -6318,6 +6340,16 @@
 	)
 	(wire
 		(pts
+			(xy 124.46 53.34) (xy 130.81 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "345f76ab-458b-4897-9d72-a6b83dee1df8")
+	)
+	(wire
+		(pts
 			(xy 59.69 62.23) (xy 46.99 62.23)
 		)
 		(stroke
@@ -6445,6 +6477,16 @@
 			(type default)
 		)
 		(uuid "4889dcb0-e39a-4dc8-af50-6fbb5c988191")
+	)
+	(wire
+		(pts
+			(xy 114.3 53.34) (xy 116.84 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a7da531-120f-4b91-a207-0ca3688e3248")
 	)
 	(wire
 		(pts
@@ -7398,6 +7440,16 @@
 	)
 	(wire
 		(pts
+			(xy 198.12 26.67) (xy 198.12 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5fb091b-c13e-4999-a5a9-d117b09539a7")
+	)
+	(wire
+		(pts
 			(xy 76.2 30.48) (xy 76.2 43.18)
 		)
 		(stroke
@@ -7578,7 +7630,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 53.34) (xy 130.81 53.34)
+			(xy 102.87 53.34) (xy 114.3 53.34)
 		)
 		(stroke
 			(width 0)
@@ -8695,7 +8747,7 @@
 		(dnp no)
 		(uuid "0cdf4c71-8592-4913-b85c-99c8b1530fa8")
 		(property "Reference" "TP5"
-			(at 126.873 64.3198 0)
+			(at 133.35 66.1557 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8704,7 +8756,7 @@
 			)
 		)
 		(property "Value" "UDPI"
-			(at 126.873 66.7441 0)
+			(at 133.35 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9384,6 +9436,72 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
+		(at 114.3 53.34 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "23002f2d-bced-4b34-9cb4-756980116051")
+		(property "Reference" "TP4"
+			(at 115.697 55.4298 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "INT"
+			(at 115.697 57.8541 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 109.22 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 109.22 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 114.3 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ea8cc391-c049-4c46-a4cd-a3a64453eceb")
+		)
+		(instances
+			(project "IntUsbPwmFanController"
+				(path "/0a081858-7105-499c-8ae3-353b1745699c"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
 		(at 199.39 86.36 0)
 		(mirror y)
 		(unit 1)
@@ -9451,7 +9569,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 125.73 106.68 180)
+		(at 125.73 96.52 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9460,7 +9578,7 @@
 		(fields_autoplaced yes)
 		(uuid "2a670c10-16d2-455f-92a8-910d8cd07ada")
 		(property "Reference" "R9"
-			(at 127.508 105.4678 0)
+			(at 127.508 95.3078 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9469,7 +9587,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 127.508 107.8921 0)
+			(at 127.508 97.7321 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9478,7 +9596,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 127.508 106.68 90)
+			(at 127.508 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9487,7 +9605,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 125.73 106.68 0)
+			(at 125.73 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9496,7 +9614,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 125.73 106.68 0)
+			(at 125.73 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9547,7 +9665,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "USB:Internal USB 2.0 Pinheader"
 			(at 212.09 34.29 0)
 			(effects
 				(font
@@ -9606,7 +9724,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 116.84 96.52 90)
+		(at 116.84 106.68 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9614,7 +9732,7 @@
 		(dnp no)
 		(uuid "39a22881-4da1-40ef-9096-0d371fd1ae52")
 		(property "Reference" "D7"
-			(at 119.761 96.8953 90)
+			(at 119.761 107.0553 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9623,7 +9741,7 @@
 			)
 		)
 		(property "Value" "UDPI"
-			(at 119.761 99.3196 90)
+			(at 119.761 109.4796 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9632,7 +9750,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
-			(at 116.84 96.52 0)
+			(at 116.84 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9641,7 +9759,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 116.84 96.52 0)
+			(at 116.84 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9650,7 +9768,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 116.84 96.52 0)
+			(at 116.84 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9659,7 +9777,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 116.84 96.52 0)
+			(at 116.84 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9668,7 +9786,7 @@
 			)
 		)
 		(property "Mouser No" "630-HSMC-C130"
-			(at 113.03 104.14 0)
+			(at 113.03 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10148,7 +10266,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 125.73 96.52 90)
+		(at 125.73 106.68 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10156,7 +10274,7 @@
 		(dnp no)
 		(uuid "478df526-5cf5-4960-9ca9-c79528725720")
 		(property "Reference" "D6"
-			(at 128.651 96.8953 90)
+			(at 128.651 107.0553 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10165,7 +10283,7 @@
 			)
 		)
 		(property "Value" "Host"
-			(at 128.651 99.3196 90)
+			(at 128.651 109.4796 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10174,7 +10292,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
-			(at 125.73 96.52 0)
+			(at 125.73 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10183,7 +10301,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 125.73 96.52 0)
+			(at 125.73 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10192,7 +10310,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 125.73 96.52 0)
+			(at 125.73 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10201,7 +10319,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 125.73 96.52 0)
+			(at 125.73 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10210,7 +10328,7 @@
 			)
 		)
 		(property "Mouser No" "720-LTQ39GQ1S22515"
-			(at 123.19 100.33 0)
+			(at 123.19 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10908,71 +11026,6 @@
 	)
 	(symbol
 		(lib_id "power:VBUS")
-		(at 251.46 25.4 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "58e9af6c-022e-4ba5-b291-6952f90f13a4")
-		(property "Reference" "#PWR021"
-			(at 251.46 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VBUS"
-			(at 251.46 21.2669 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 251.46 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 251.46 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 251.46 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c5081893-dedc-4564-9296-e21406bddcba")
-		)
-		(instances
-			(project "IntUsbPwmFanController"
-				(path "/0a081858-7105-499c-8ae3-353b1745699c"
-					(reference "#PWR021")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VBUS")
 		(at 189.23 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11181,6 +11234,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:SolderJumper_2_Bridged")
+		(at 120.65 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "626e17df-ff18-4371-86cd-4ef0d1121f00")
+		(property "Reference" "JP4"
+			(at 124.46 54.7257 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "INT"
+			(at 124.46 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
+			(at 120.65 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
+			(at 120.65 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4e2ac2b5-2d67-437c-b8c6-5de5bb8f745d")
+		)
+		(pin "1"
+			(uuid "135b1d2b-1081-4922-ba36-197c01a392b8")
+		)
+		(instances
+			(project "IntUsbPwmFanController"
+				(path "/0a081858-7105-499c-8ae3-353b1745699c"
+					(reference "JP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Memory_EEPROM:AT24CS01-SSHM")
 		(at 135.89 152.4 0)
 		(unit 1)
@@ -11283,9 +11403,9 @@
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "732f3373-8033-4af2-8641-6de5349861a8")
 		(property "Reference" "J7"
@@ -11823,6 +11943,72 @@
 			(project "IntUsbPwmFanController"
 				(path "/0a081858-7105-499c-8ae3-353b1745699c"
 					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VBUS")
+		(at 198.12 26.67 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "911f9456-9dd5-492e-a009-a13999e8c6d4")
+		(property "Reference" "#PWR027"
+			(at 198.12 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VUSB"
+			(at 198.12 22.5369 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.12 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 198.12 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bf1ed4ce-6a57-48c0-8274-167d22b6f75e")
+		)
+		(instances
+			(project "IntUsbPwmFanController"
+				(path "/0a081858-7105-499c-8ae3-353b1745699c"
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -13315,10 +13501,9 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c4e0f18a-2f5b-4f51-b9d3-14bc068be611")
 		(property "Reference" "JP1"
-			(at 120.65 57.1965 0)
+			(at 120.65 64.8857 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13326,7 +13511,7 @@
 			)
 		)
 		(property "Value" "UDPI_EN"
-			(at 120.65 59.6208 0)
+			(at 121.92 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13377,7 +13562,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 116.84 106.68 180)
+		(at 116.84 96.52 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13386,7 +13571,7 @@
 		(fields_autoplaced yes)
 		(uuid "cbf6c65e-5d1b-409c-bbd7-956164b2dc46")
 		(property "Reference" "R23"
-			(at 118.618 105.4678 0)
+			(at 118.618 95.3078 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13395,7 +13580,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 118.618 107.8921 0)
+			(at 118.618 97.7321 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13404,7 +13589,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 118.618 106.68 90)
+			(at 118.618 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13413,7 +13598,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 116.84 106.68 0)
+			(at 116.84 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13422,7 +13607,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 116.84 106.68 0)
+			(at 116.84 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13932,6 +14117,72 @@
 			(project "IntUsbPwmFanController"
 				(path "/0a081858-7105-499c-8ae3-353b1745699c"
 					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VBUS")
+		(at 251.46 25.4 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e1a1d445-498e-494f-a550-ead072d165df")
+		(property "Reference" "#PWR028"
+			(at 251.46 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VUSB"
+			(at 251.46 21.2669 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 251.46 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 251.46 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 251.46 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "85910e61-b87d-42cd-8d69-7e27d28c3b7e")
+		)
+		(instances
+			(project "IntUsbPwmFanController"
+				(path "/0a081858-7105-499c-8ae3-353b1745699c"
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
