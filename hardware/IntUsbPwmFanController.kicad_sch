@@ -9665,7 +9665,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "USB:Internal USB 2.0 Pinheader"
+		(property "Footprint" "USB:Internal USB 2.0 Socket Default"
 			(at 212.09 34.29 0)
 			(effects
 				(font

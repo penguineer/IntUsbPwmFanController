@@ -1,4 +1,4 @@
-(footprint "Internal USB 2.0 Pinheader"
+(footprint "Internal USB 2.0 Pinheader NUC"
 	(version 20241229)
 	(generator "pcbnew")
 	(generator_version "9.0")
@@ -41,7 +41,7 @@
 			)
 		)
 	)
-	(property "Description" "Pinheader for USB 2.0 connectors as they can be found on PC mainboards"
+	(property "Description" "Pinheader for USB 2.0 connectors as they can be found on PC mainboards (NUC pitch 2.0mm"
 		(at -5.39 -3.2 0)
 		(unlocked yes)
 		(layer "F.Fab")
