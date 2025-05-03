@@ -5395,6 +5395,16 @@
 		)
 		(uuid "37eeba4c-1d32-4c68-b413-43ebe2e2c1c5")
 	)
+	(text "USB crossed for \nbetter layout"
+		(exclude_from_sim no)
+		(at 190.5 44.45 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "40cf6501-d302-4a38-9272-470925aa7cdf")
+	)
 	(text "EEPROM is not needed\nwith default configiration"
 		(exclude_from_sim no)
 		(at 135.89 175.26 0)
@@ -8048,22 +8058,22 @@
 	)
 	(global_label "USB2-"
 		(shape bidirectional)
-		(at 226.06 36.83 0)
+		(at 198.12 36.83 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1 1)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "1ce20452-17a1-4ab0-b90c-73784bd67ff4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 234.4758 36.83 0)
+			(at 189.7042 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -8092,22 +8102,22 @@
 	)
 	(global_label "USB2+"
 		(shape bidirectional)
-		(at 226.06 39.37 0)
+		(at 198.12 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1 1)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "2eed69d7-d0b2-4cb5-aaed-5ce3b6287be2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 234.4758 39.37 0)
+			(at 189.7042 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -8136,22 +8146,22 @@
 	)
 	(global_label "USB1+"
 		(shape bidirectional)
-		(at 198.12 39.37 180)
+		(at 226.06 39.37 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1 1)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "4f317d5e-3953-44fa-a46d-2e812fdc50fa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 189.7042 39.37 0)
+			(at 234.4758 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -8444,22 +8454,22 @@
 	)
 	(global_label "USB1-"
 		(shape bidirectional)
-		(at 198.12 36.83 180)
+		(at 226.06 36.83 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1 1)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "fec11f0f-f836-4e05-a0b5-50cb7f9b1bbf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 189.7042 36.83 0)
+			(at 234.4758 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -9665,7 +9675,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "USB:Internal USB 2.0 Socket Default"
+		(property "Footprint" "USB:Internal USB 2.0 Header Default"
 			(at 212.09 34.29 0)
 			(effects
 				(font
