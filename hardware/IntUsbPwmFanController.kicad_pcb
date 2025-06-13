@@ -9198,7 +9198,7 @@
 		(descr "SOIC, 8 Pin (JEDEC MS-012AA, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_8.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOIC SO")
 		(property "Reference" "U2"
-			(at 0 3.683 90)
+			(at 0 -3.556 90)
 			(layer "F.SilkS")
 			(uuid "e5e9a696-75d7-4ca0-a06c-f6278b109b5c")
 			(effects
@@ -11949,7 +11949,7 @@
 			(net 15 "VUSB")
 			(pinfunction "V_{BUS}")
 			(pintype "power_out")
-			(uuid "8e7bc0a0-1eca-41c5-9a3e-2d3122f750ce")
+			(uuid "095327e2-0500-43f7-b334-4949d7850650")
 		)
 		(pad "2" thru_hole circle
 			(at 0 2.54 180)
@@ -12015,7 +12015,7 @@
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "b793e9a2-7dbe-4cdb-b5be-491e04beec2d")
+			(uuid "30b6973b-2b5a-4579-b9a3-6ccebe43ff50")
 		)
 		(pad "7" thru_hole circle
 			(at 2.54 10.16 180)
@@ -12586,6 +12586,18 @@
 			(justify left)
 		)
 	)
+	(gr_text "USB PWM Fan Controller v1"
+		(at 152.4 60.96 90)
+		(layer "F.SilkS")
+		(uuid "acdb0bde-8955-4c66-a2bd-0752d372f0c7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "UDPI"
 		(at 157.988 42.926 90)
 		(layer "F.SilkS")
@@ -12595,6 +12607,19 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
+		)
+	)
+	(gr_text "CC-BY-SA 2025 Stefan Haun"
+		(at 153.67 60.96 90)
+		(layer "F.SilkS")
+		(uuid "b87c2992-f903-4ba4-bed2-1bcea0c5a481")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+				(bold yes)
+			)
+			(justify left bottom)
 		)
 	)
 	(gr_text "USB In"
@@ -12679,6 +12704,18 @@
 				(thickness 0.15)
 			)
 			(justify right bottom)
+		)
+	)
+	(gr_text "https://github.com/penguineer/IntUsbPwmFanController"
+		(at 152.4 19.05 90)
+		(layer "B.SilkS")
+		(uuid "be516c06-2ca2-4c60-8012-6b92e0062927")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
 		)
 	)
 	(segment
